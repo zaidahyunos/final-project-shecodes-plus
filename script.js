@@ -16,6 +16,8 @@ function updateWeatherInfo(response) {
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" />`;
+
+  console.log(response);
 }
 
 function formatDate(date) {
