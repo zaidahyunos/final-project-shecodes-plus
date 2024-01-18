@@ -90,32 +90,6 @@ strong {
   text-transform: capitalize;
 }
 
-.forecast-weather {
-  display: flex;
-  justify-content: space-between;
-}
-
-.mon,
-.tue,
-.wed,
-.thu,
-.fri,
-.sat {
-  text-align: center;
-}
-
-.mon-icon,
-.tue-icon,
-.wed-icon,
-.thu-icon,
-.fri-icon,
-.sat-icon {
-  width: 60px;
-  height: 60px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 footer {
   border-top: 5px solid #f0f0f0;
   padding-top: 20px;
