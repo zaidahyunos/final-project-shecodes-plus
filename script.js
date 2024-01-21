@@ -38,7 +38,26 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecast = document.querySelector("#weather-forecast");
+
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecast.innerHTML = `
+  <div class="forecast-days">
+    <div class="day-1">${day}</div>
+    <div class="weather-forecast-icon">☀️</div>
+    <div class="weather-forecast-temperature">
+      <div class="max-temp">18°C</div>
+      <div class="min-temp">15°C</div>
+    </div>
+  </div>
+`;
+  });
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Kuala Lumpur");
+displayForecast();

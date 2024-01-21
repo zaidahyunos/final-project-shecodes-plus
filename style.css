@@ -19,7 +19,6 @@ a {
 .container {
   background: #f0f0f0;
   max-width: 800px;
-
   margin: 30px auto;
   padding: 30px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
@@ -96,4 +95,14 @@ footer {
   text-align: center;
   font-size: clamp(9px, 1vw, 14px);
   color: rgba(0, 0, 0, 0.6);
+}
+
+hr {
+  border: 2px solid rgba(0, 77, 116, 0.1);
+  border-radius: 5px;
+}
+
+.days-forecast {
+  margin: 3px;
+  text-align: center;
 }
