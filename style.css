@@ -106,3 +106,23 @@ hr {
   margin: 3px;
   text-align: center;
 }
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.max-temp {
+  margin-right: 5px;
+  color: #f65282;
+  font-weight: bold;
+}

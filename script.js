@@ -39,21 +39,26 @@ function handleSearchSubmit(event) {
 }
 
 function displayForecast() {
-  let forecast = document.querySelector("#weather-forecast");
-
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
   days.forEach(function (day) {
-    forecast.innerHTML = `
+    forecastHtml =
+      forecastHtml +
+      `
   <div class="forecast-days">
     <div class="day-1">${day}</div>
     <div class="weather-forecast-icon">☀️</div>
     <div class="weather-forecast-temperature">
-      <div class="max-temp">18°C</div>
-      <div class="min-temp">15°C</div>
+      <div class="max-temp">18°C  </div> <div class="min-temp">15°C</div>
+      
     </div>
   </div>
 `;
   });
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
