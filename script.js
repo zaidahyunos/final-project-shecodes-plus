@@ -18,6 +18,8 @@ function updateWeatherInfo(response) {
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="temperature-icon" />`;
 
   console.log(response);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -27,6 +29,7 @@ function formatDate(date) {
 function searchCity(city) {
   let apiKey = "a8c4f4faa8db0498d2codf9b3t8812a2";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
   axios.get(apiUrl).then(updateWeatherInfo);
 }
 
@@ -38,8 +41,17 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let key = "a8c4f4faa8db0498d2codf9b3t8812a2";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${key}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -50,7 +62,7 @@ function displayForecast() {
     <div class="day-1">${day}</div>
     <div class="weather-forecast-icon">☀️</div>
     <div class="weather-forecast-temperature">
-      <div class="max-temp">18°C  </div> <div class="min-temp">15°C</div>
+      <div class="max-temp">18°C</div> <div class="min-temp">15°C</div>
       
     </div>
   </div>
@@ -65,4 +77,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Kuala Lumpur");
-displayForecast();
