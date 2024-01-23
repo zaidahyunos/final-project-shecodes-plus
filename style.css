@@ -59,9 +59,9 @@ a {
 }
 
 .temperature-icon {
-  width: 100px;
-  height: 100px;
-  margin-top: 2px;
+  width: 130%;
+  margin-top: -20px;
+  margin-right: 30px;
 }
 
 .temperature-unit {
@@ -120,13 +120,18 @@ hr {
 
 .weather-forecast-temperature {
   text-align: center;
-  margin-top: 10px;
+  margin-top: -10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .max-temp {
-  margin-right: 5px;
   color: #f65282;
   font-weight: bold;
+  margin-right: 10px;
+}
+
+.weather-forecast-icon {
+  width: 70%;
+  margin-top: -10px;
 }
